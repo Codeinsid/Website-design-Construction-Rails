@@ -2,3 +2,32 @@
 # yarn lockfile v1
 
 
+bootstrap@3.3.7:
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.3.7.tgz#5a389394549f23330875a3b150656574f8a9eb71"
+  integrity sha512-qcFaisBrcBhTFkz1IUnGDYnX6ZWfFzH8zOixUDtHW9Ip+r+7MfMFav2rzy7cIHc7rgIg7xjhWBoo1mS/U26j4g==
+
+font-awesome@4.6.3:
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.6.3.tgz#86933651540ee00874c664017f50f2172f6531a2"
+  integrity sha512-I5rWuHv7MI5uYDGFT1SJohxdkTfks41QQ9fvMEzvBnWppsehXnoj8LNuW4MGtawSrHvApYVhCZSC7rk5wDycyw==
+
+jquery.min.js@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/jquery.min.js/-/jquery.min.js-3.5.1.tgz#a15eda0cb72e78053a1662fff43b8b286e92b755"
+  integrity sha512-bs5wJF6/E7gVsfUUsexwaLgfQiC3ENVvagXEbycftHbBuyZYL7vkZDamJIJg5GuRnjHx0hfVOUKO+kur+sUjlA==
+
+jquery@3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+  integrity sha512-Ubldcmxp5np52/ENotGxlLe6aGMvmF4R8S6tZjsP6Knsaxd/xp3Zrh50cG93lR6nPXyUFwzN3ZSOQI0wRJNdGg==
+
+metismenu.min.js@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/metismenu.min.js/-/metismenu.min.js-2.1.0.tgz#9f91e47704a97a2a10fdc1e4d9b911fa56faedcd"
+  integrity sha512-he5Rkb7VnzAqQfV241pYwLd7lwh5eUnvM+hnvM3p4azfbBSAGmrml6q3ujkJ2SFzZdr2KiL255yflukKwSPMyw==
+
+metismenu@3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/metismenu/-/metismenu-3.0.3.tgz#961e4c9469144d5078f6228b6e049e58f3137140"
+  integrity sha512-nd3+yxSivGG0a5JZJxzlbXQv9aovf1yLjIYfa/s49PrvgTLlJsoe90kw9RbA6RPbPatJxENX0CegX4Hlbfaw8w==

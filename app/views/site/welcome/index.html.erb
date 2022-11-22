@@ -3,3 +3,18 @@
 <h1>Site::Welcome#index</h1>
 site_welcome_index_path
 <p>Find me in app/views/site/welcome/index.html.erb</p>
+
+<% if user_signed_in?  %>
+  <p> Usuário LOGADO / <%= current_user.email %></p>
+  
+  <% else %>
+  <p> Usuário Não está Logado </p>
+  <% end %>
+  
+
+<% if admin_signed_in?  %>
+  <p> Administrador LOGADO / <%= current_admin.email %></p>
+  
+  <% else %>
+  <p> Administrador Não está Logado </p>
+  <% end %>

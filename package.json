@@ -1,0 +1,16 @@
+{
+  "name": "time_to_aswer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Codeinsid/Website-design-questions-and-answers-Construction-Rails.git",
+  "author": "Thiago <analista.almeida@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "3.3.7",
+    "font-awesome": "4.6.3",
+    "jquery": "3.3.1",
+    "jquery.min.js": "^3.5.1",
+    "metismenu": "3.0.3",
+    "metismenu.min.js": "^2.1.0"
+  }
+}
