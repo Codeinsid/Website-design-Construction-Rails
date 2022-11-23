@@ -9,8 +9,8 @@ namespace :dev do
       show_spinner("Criando banco") {%x(rails db:create)} 
       show_spinner("Migrando o banco") {%x(rails db:migrate)}
       show_spinner("Cadastrando o administrador padrão..") {%x(rails dev:add_default_admin)}
-      show_spinner("Cadastrando o usuario padrão..") {%x(rails dev:add_default_user)}
-      #%x(rails dev:add_cavaleiros)
+      show_spinner("Cadastrando  administradores extras..") {%x(rails dev:add_extras_admins)}
+      show_spinner("Cadastrando o usuario padrão..") {%x(rails dev:add_default_user)} 
     else
       puts "Você não está em modo de desenvolvimento!"
     end
@@ -25,6 +25,16 @@ namespace :dev do
     )
     end
 
+    desc "Adiciona  administradores extras"
+    task add_extras_admins: :environment do
+      10.times do |i|
+      Admin.create!(
+        email: Faker::Internet.email,
+        password: DEFAULT_PASSWORD,
+        password_confirmation: DEFAULT_PASSWORD
+      )
+      end
+    end  
   desc "Adiciona o usuário padrão"
   task add_default_user: :environment do
     User.create!(
@@ -33,6 +43,7 @@ namespace :dev do
     password_confirmation: DEFAULT_PASSWORD
     )
     end
+    
   private
   
   def show_spinner(msg_start, msg_end = "Concluido")
