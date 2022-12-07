@@ -44,6 +44,10 @@ gem 'webpacker'
 gem 'tty-spinner'
 # gera conta de usuários com email e senha
 gem 'faker'
+#paginação
+gem 'kaminari'
+#i18n kaminari
+gem 'kaminari-i18n'
 
 
 group :development, :test do

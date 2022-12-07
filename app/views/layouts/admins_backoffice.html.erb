@@ -65,12 +65,18 @@
                             <i class="fa fa-dashboard fa-fw"></i> Dashboard
                             <% end %>
                         </li>
-
+                  
                          <li>
                             <%= link_to admins_backoffice_admins_path do %>
                             <i class="fa fa-users fa-fw"></i> Administradores
                             <% end  %>
                         </li>
+
+                          <li>
+                            <%= link_to admins_backoffice_subjects_path do %>
+                            <i class="fa fa-file-text-o fa-fw"></i> Assuntos/Áreas
+                            <% end  %>
+                            </li>
                         
                     </ul>                                                               
                 </div>
@@ -97,8 +103,22 @@
     </div>
     <!-- /#wrapper -->
     <%= javascript_include_tag 'application' %>
-     <%= javascript_include_tag 'admins_backoffice' %>
+    <%= javascript_include_tag 'admins_backoffice' %>
 
+    <% if notice %>
+        <%= javascript_tag do%>
+            $.bootstrapGrowl('<%= notice %>', {
+                ele: 'body', // which element to append to
+                type: 'success', // (null, 'info', 'danger', 'success')
+                offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
+                align: 'right', // ('left', 'right', or 'center')
+                width: 250, // (integer, or 'auto')
+                delay: 4000, // Time while the message will be displayed. It's not equivalent to the *demo* timeOut!
+                allow_dismiss: true, // If true then will display a cross to close the popup.
+                stackup_spacing: 10 // spacing between consecutively stacked growls.
+                });    
+        <% end %>
+    <% end %>
 </body>
 
 </html>
