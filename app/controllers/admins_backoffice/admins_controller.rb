@@ -1,7 +1,7 @@
 class AdminsBackoffice::AdminsController < AdminsBackofficeController
   before_action :verify_password, only: [:update]
   before_action :set_admin, only: [:edit, :update, :destroy]
-  
+
   def index
     @admins = Admin.all.page(params[:page])
   end
@@ -13,36 +13,35 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
   def create
     @admin = Admin.new(params_admin)
     if @admin.save
-      redirect_to admins_backoffice_admins_path, notice: "Administrador Cadastrado com Sucesso!"
+      redirect_to admins_backoffice_admins_path, notice: "Administrador cadastrado com sucesso!"
     else
-      render :new 
+      render :new
     end
   end
 
-  def edit   
+  def edit
   end
 
-  def update         
+  def update    
     if @admin.update(params_admin)
-      redirect_to admins_backoffice_admins_path, notice: "Administrador Atualizado com Sucesso!"
+      redirect_to admins_backoffice_admins_path, notice: "Administrador atualizado com sucesso!"
     else
-      render :edit 
+      render :edit
     end
   end
 
   def destroy
     if @admin.destroy
-      redirect_to admins_backoffice_admins_path, notice: "Administrador Excluido com Sucesso!"
+      redirect_to admins_backoffice_admins_path, notice: "Administrador excluído com sucesso!"
     else
       render :index
     end
   end
 
-
   private
-
+  
   def params_admin
-    params_admin = params.require(:admin).permit(:email, :password, :password_confirmation)
+    params.require(:admin).permit(:email, :password, :password_confirmation)
   end
 
   def set_admin
@@ -50,11 +49,8 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
   end
 
   def verify_password
-    if  params[:admin][:password].blank? &&  params[:admin][:password_confirmation].blank?
+    if params[:admin][:password].blank? && params[:admin][:password_confirmation].blank?
       params[:admin].extract!(:password, :password_confirmation)
     end
-
   end
-
 end
-

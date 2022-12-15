@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Listando Administradores</h1>
+        <h1 class="page-header"><%= t('messages.listing', model: @admins.model_name.human) %></h1>
     </div>
 </div>    
                 <!-- /.col-lg-12 -->
@@ -9,7 +9,7 @@
       <thead>
           <tr>
               <th style="width: 50px">#</th>
-              <th>Email</th> 
+              <th><%= translate_attribute(@admins, :email) %></th> 
               <th>
                  <%= link_to new_admins_backoffice_admin_path ,class:"btn btn-success btn-circle" do  %>
                 <i class="fa fa-plus"></i>
@@ -28,7 +28,9 @@
                 <i class="fa fa-edit"></i>
                 <% end %>
                 
-                <%= link_to admins_backoffice_admin_path(admin), method: :delete, class:"btn btn-danger btn-circle", data: { confirm: "Deseja realmente excluir esse administrador?"} do  %>
+                <%= link_to admins_backoffice_admin_path(admin), method: :delete, 
+                class:"btn btn-danger btn-circle", 
+                data: { confirm: t('messages.confirm_with', item: admin.email.truncate(20))} do  %>
                 <i class="fa fa-minus"></i>
                 <% end %>
 
