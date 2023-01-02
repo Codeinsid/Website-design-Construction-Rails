@@ -48,6 +48,8 @@ gem 'faker'
 gem 'kaminari'
 #i18n kaminari
 gem 'kaminari-i18n'
+#Formulários aninhados
+gem "cocoon"
 
 
 group :development, :test do
