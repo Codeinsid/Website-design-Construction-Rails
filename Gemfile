@@ -14,6 +14,8 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
+
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
@@ -52,11 +54,19 @@ gem 'kaminari-i18n'
 gem "cocoon"
 
 
+
+
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
+  #http://localhost:3000/rails/db/
+  gem 'rails_db', '2.3.0'
+
   gem 'sqlite3'
+
 end
 
 group :development do
@@ -68,6 +78,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   #tipo um pry usando o ap antes do comando para deixar mais organizado
   gem 'awesome_print'
+
+
+
+
 
 end
 

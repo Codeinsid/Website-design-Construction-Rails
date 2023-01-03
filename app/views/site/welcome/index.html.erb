@@ -1,20 +1,14 @@
-<%= link_to 'Admin', admins_backoffice_welcome_index_path, class:"btn btn-primary btn-lg" %>
-<%= link_to 'Users', users_backoffice_welcome_index_path, class:"btn btn-primary btn-lg" %>
-<h1>Site::Welcome#index</h1>
-site_welcome_index_path
-<p>Find me in app/views/site/welcome/index.html.erb</p>
-
-<% if user_signed_in?  %>
-  <p> Usuário LOGADO / <%= current_user.email %></p>
-  
-  <% else %>
-  <p> Usuário Não está Logado </p>
-  <% end %>
-  
-
-<% if admin_signed_in?  %>
-  <p> Administrador LOGADO / <%= current_admin.email %></p>
-  
-  <% else %>
-  <p> Administrador Não está Logado </p>
-  <% end %>
+<% @questions.each do |question| %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= question.description %></h3>
+  </div>
+  <div class="panel-body">
+    <ul>
+      <% question.answers.each do |answer| %>
+        <li><%= answer.description %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<% end %>
